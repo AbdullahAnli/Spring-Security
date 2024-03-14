@@ -12,14 +12,19 @@ public class PrivateController {
     public String helloPublic(){
         return "hello Laz Umut";
     }
-    @PreAuthorize("hasRole('USER')")
+
     @GetMapping("/user")
     public String helloUser(){
         return "user";
     }
-    @PreAuthorize("hasRole('ADMIN')")
+
     @GetMapping("/admin")
     public String helloadmin(){
         return  "admin";
+    }
+
+    @GetMapping("/yns")
+    public String ynstext(){
+        return "yunus";
     }
 }
